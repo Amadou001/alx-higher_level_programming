@@ -64,4 +64,3 @@ free(*list_1);
 free(*list_2);
 return (1);
 }
-
