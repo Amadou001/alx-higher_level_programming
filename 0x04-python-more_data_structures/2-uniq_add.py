@@ -5,7 +5,6 @@ def uniq_add(my_list=[]):
     for number in my_list:
         my_set.add(number)
     new_list = list(my_set)
-    print(new_list)
     for x in new_list:
         num_sum +=  x
     return num_sum
