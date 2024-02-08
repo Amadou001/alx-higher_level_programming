@@ -10,12 +10,8 @@ class Square:
             size(int): size of  the square's side
             position(tuple): position of the surface representation
         """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def position(self):
@@ -47,15 +43,15 @@ class Square:
             Args:
                 value:(int) new value of the size
         """
-        self.__size = value
-        if not isinstance(self.__size, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif self.__size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
+        self.__size = value
 
     def area(self):
         """Function that returns the area of the squre"""
-        return self.__size * self.__size
+        return self.__size ** 2
 
     def my_print(self):
         """Function that prints the area with the # character"""
