@@ -51,7 +51,7 @@ class SinglyLinkedList:
         """Inserts a new Node into the correct sorted\
         position in the list (increasing order)"""
         new_node = Node(value)
-        if self.__head is None or value < self.__head.data:
+        if self.__head is None or value <= self.__head.data:
             new_node.next_node = self.__head
             self.__head = new_node
         else:
