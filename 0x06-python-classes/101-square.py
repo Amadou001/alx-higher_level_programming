@@ -65,7 +65,3 @@ class Square:
             square_str += " " * self.__position[0] + "#" * self.__size + "\n"
 
         return square_str
-
-    def __repr__(self):
-        """Representation of the square"""
-        return self.__str__()
