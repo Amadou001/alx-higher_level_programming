@@ -1,0 +1,65 @@
+# test_add_integer.txt
+
+Test add_integer function:
+
+import the module
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Test of two positive integers
+
+    >>> add_integer(2, 3)
+    5
+
+Test of two negative integers
+
+    >>> add_integer(-2, -3)
+    -5
+
+Test of one positive integer and one negative
+
+    >>> add_integer(3, -2)
+    1
+
+Test of one integer and one float
+
+    >>> add_integer(3, 2.5)
+    5
+
+Test of two float numbers
+
+    >>> add_integer(4.2, 1.4)
+    5
+
+Test of one integer by using the optional value
+
+     >>> add_integer(0)
+     98
+    
+Test of one float number
+
+     >>> add_integer(1.2)
+     99
+
+Test of a string
+
+    >>> add_integer(4, "a")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Test of a string
+
+    >>> add_integer("a", 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Test of large integers
+
+    >>> add_integer(10**9, 10**9)
+    2000000000
+
+Test of large floats
+
+    >>> add_integer(1.5e9, 1.5e9)
+    3000000000
