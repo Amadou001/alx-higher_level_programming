@@ -1,0 +1,48 @@
+#5-text_indentation.txt
+==========================
+
+Test of text_indentation function:
+
+Import text_indentation function:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test with a string containing only . :
+
+    >>> text_indentation("Welcome to the. Unittesting")
+    Welcome to the.
+    <BLANKLINE>
+    Unittesting
+
+Test with a string containing only ? :
+
+    >>> text_indentation("Welcome to the? Unittesting")
+    Welcome to the?
+    <BLANKLINE>
+    Unittesting
+
+
+Test with a string containing only : :
+
+    >>> text_indentation("Welcome to the: Unittesting")
+    Welcome to the:
+    <BLANKLINE>
+    Unittesting
+
+Test with a string containing . ? :
+
+    >>> text_indentation("Welcome to the? Unittesting: and pay attention. to every detail")
+    Welcome to the?
+    <BLANKLINE>
+    Unittesting:
+    <BLANKLINE>
+    and pay attention.
+    <BLANKLINE>
+    to every detail
+
+Test with number:
+
+    >>> text_indentation(45)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
