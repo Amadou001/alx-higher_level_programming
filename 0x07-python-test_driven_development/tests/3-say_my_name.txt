@@ -1,0 +1,32 @@
+#3-say_my_name.txt
+========================
+
+Test say_my_name function:
+
+Import say_my_name function:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Test of two strings:
+
+    >>> say_my_name("Amadou", "Bah")
+    My name is Amadou Bah
+
+Test of one string:
+
+    >>> say_my_name("Amadou")
+    My name is Amadou 
+
+Test with the first parameter as a number:
+
+    >>> say_my_name(42, "Bah")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Test with the second parameter as number:
+
+    >>> say_my_name("Amadou", 42)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
