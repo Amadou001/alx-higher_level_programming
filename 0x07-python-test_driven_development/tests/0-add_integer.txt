@@ -1,4 +1,4 @@
-# test_add_integer.txt
+# 0_add_integer.txt
 
 Test add_integer function:
 

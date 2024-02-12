@@ -1,0 +1,55 @@
+#2-matrix_divided.txt
+========================
+
+Test matrix_divided function:
+Import the module
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Test with a matrix of integers and an integer divisor:
+
+    >>> matrix_divided([[4, -8, 7], [0, 6, -9]], 3)
+    [[1.33, -2.67, 2.33], [0.0, 2.0, -3.0]]
+
+Test with a matrix mixed with integers and floats and an integer divisor:
+
+    >>> matrix_divided([[4.2, -8, 7], [0, 6.4, -9]], 3)
+    [[1.4, -2.67, 2.33], [0.0, 2.13, -3.0]]
+
+Test with a matrix mixed with integers and floats and a float divisor:
+
+    >>> matrix_divided([[4.2, -8, 7], [0, 6.4, -9]], 3.2)
+    [[1.31, -2.5, 2.19], [0.0, 2.0, -2.81]]
+
+Test with a matrix in which the rows don't have the same size:
+
+    >>> matrix_divided([[4.2, -8, 7], [0, 6.4]], 3.2)
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same size
+
+Test with a matrix containing strings:
+
+    >>> matrix_divided([[4.2, -8, 7], [0, 6.4, "hello"]], 3.2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test with a divisor which is a string:
+
+    >>> matrix_divided([[4, -8, 7], [0, 6, -9]], "divisor")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+Test with the divisor with the value 0:
+
+    >>> matrix_divided([[4, -8, 7], [0, 6, -9]], 0)
+    Traceback (most recent call last):
+     ...
+    ZeroDivisionError: division by zero
+
+
+
+
+
