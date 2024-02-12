@@ -80,5 +80,6 @@ class Rectangle:
         for i in range(self.__height):
             if i == 0:
                 string_rectangle += "#" * self.__width
+                continue
             string_rectangle += "\n" + "#" * self.__width
         return string_rectangle
