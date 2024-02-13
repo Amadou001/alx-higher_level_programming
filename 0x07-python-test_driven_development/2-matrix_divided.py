@@ -4,6 +4,8 @@ Matrix division
 
 Use of matrix_divided
 """
+
+
 def matrix_divided(matrix, div):
     """
     Matrix division:
@@ -25,16 +27,16 @@ def matrix_divided(matrix, div):
             raise TypeError("Each row of the matrix must have the same size")
         for element in row:
             if type(element) not in [int, float]:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError("matrix must be a matrix\
+                                 (list of lists) of integers/floats")
             else:
                 result = element / div
                 new_row.append(round(result, 2))
         new_matrix.append(new_row)
         new_row = []
 
-
-
     return new_matrix
+
 
 if __name__ == '__main__':
     import doctest
