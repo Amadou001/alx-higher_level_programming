@@ -1,0 +1,15 @@
+#1-my_list.txt
+==========================
+
+Test my_list class:
+
+Import the module
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Value Testing:
+
+    >>> my_list = MyList()
+    >>> my_list.extend([1, 4, 3, 2])
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4]
