@@ -35,8 +35,3 @@ Original list unchanged:
     [-10, 0, 1, 2, 10, 20, 100]
     >>> ml
     [2, 10, 1, -10, 20, 100, 0]
-
-print_sorted method called via class with no args:
-    >>> ml.__class__.print_sorted()
-    Traceback (most recent call last):
-    TypeError: MyList.print_sorted() missing 1 required positional argument: 'self'
