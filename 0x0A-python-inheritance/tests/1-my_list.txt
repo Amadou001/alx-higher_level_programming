@@ -17,4 +17,14 @@ Negative ints list test:
     >>> ml = MyList([-1000, -98, -232565, 0, -23423434, -123])
     >>> ml.print_sorted()
     [-23423434, -232565, -1000, -123, -98, 0]
-    
+
+List already in order:
+    >>> ml = MyList([-10, 0, 1, 2, 10, 20, 100])
+    >>> ml.print_sorted()
+    [-10, 0, 1, 2, 10, 20, 100]
+
+Test append:
+    >>> ml = MyList()
+    >>> ml.append(10)
+    >>> ml
+    [10]
