@@ -9,7 +9,12 @@ Import the module
 
 Value Testing:
 
-    >>> my_list = MyList()
-    >>> my_list.extend([1, 4, 3, 2])
+    >>> my_list = MyList([1, 4, 3, 2])
     >>> my_list.print_sorted()
     [1, 2, 3, 4]
+
+Negative ints list test:
+    >>> ml = MyList([-1000, -98, -232565, 0, -23423434, -123])
+    >>> ml.print_sorted()
+    [-23423434, -232565, -1000, -123, -98, 0]
+    
