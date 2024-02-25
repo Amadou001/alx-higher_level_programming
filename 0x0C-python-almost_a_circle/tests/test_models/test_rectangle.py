@@ -128,3 +128,12 @@ class Test_rectangle(unittest.TestCase):
         self.assertEqual(str(rectangle), '[Rectangle] (10) 8/5 - 2/4')
         rectangle = Rectangle(2, 4, 8, 5)
         self.assertEqual(str(rectangle), '[Rectangle] ({}) 8/5 - 2/4'.format(rectangle.id))
+
+    def test_update(self):
+        rectangle = Rectangle(2, 3, 5, 7, 10)
+        rectangle.update(7, 3, 8, 6, 9)
+        self.assertEqual(rectangle.id, 7)
+        self.assertEqual(rectangle.width, 3)
+        self.assertEqual(rectangle.height, 8)
+        self.assertEqual(rectangle.x, 6)
+        self.assertEqual(rectangle.y, 9)
