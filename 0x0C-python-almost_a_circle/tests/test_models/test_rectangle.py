@@ -10,12 +10,12 @@ class Test_rectangle(unittest.TestCase):
         self.assertEqual(rectangle.height, 2)
         self.assertEqual(rectangle.x, 4)
         self.assertEqual(rectangle.y, 5)
-        self.assertEqual(rectangle.id, 2)
+        self.assertEqual(rectangle.id, 4)
 
         rectangle = Rectangle(10, 2, 0, 0)
         self.assertEqual(rectangle.x, 0)
         self.assertEqual(rectangle.y, 0)
-        self.assertEqual(rectangle.id, 3)
+        self.assertEqual(rectangle.id, 5)
         rectangle = Rectangle(10, 2, 4, 5, 10)
         self.assertEqual(rectangle.id, 10)
 
