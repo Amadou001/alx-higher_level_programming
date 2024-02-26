@@ -79,3 +79,31 @@ class Base:
             list_dicts = cls.from_json_string(json_string)
 
             return [cls.create(**list_dict) for list_dict in list_dicts]
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """write the json string represention in a csv file"""
+        if list_objs is None:
+            list_objs = []
+
+        file_name = f"{cls.__name__}.csv"
+        json_string = cls.to_json_string(
+            [one_object.to_dictionary() for one_object in list_objs])
+
+        with open(file_name, "w") as file:
+            file.write(json_string)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserialize, returns a list of instances"""
+        file_name = f"{cls.__name__}.csv"
+
+        if not os.path.exists(file_name):
+            return []
+        else:
+            with open(file_name, "r") as file:
+                json_string = file.read()
+
+                list_dict = cls.from_json_string(json_string)
+
+                return [cls.create(**one_list) for one_list in list_dict]
