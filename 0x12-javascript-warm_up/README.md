@@ -18,5 +18,4 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * What are the arithmetic operators and how to use them
 * How to manipulate dictionary
 * How to import a file
-[![js-semistandard-style](https://raw.githubusercontent.com/standard/semistandard/master/badge.svg)][def]
-[def]: https://github.com/standard/semistandard
+[![js-semistandard-style](https://raw.githubusercontent.com/standard/semistandard/master/badge.svg)](https://github.com/standard/semistandard)
