@@ -13,7 +13,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * How to use `while` and `for` loops
 * How to use `break` and `continue` statements
 * What is a function and how do you use functions
-* What does a function that does not use any return statement return
+* What does a function that does not use any `return` statement return
 * Scope of variables
 * What are the arithmetic operators and how to use them
 * How to manipulate dictionary
