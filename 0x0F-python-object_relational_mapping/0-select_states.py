@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module for listing all states from the database hbtn_0e_0_usa"""
+"""
+Module for listing all states from the database hbtn_0e_0_usa
+"""
 
 if __name__ == "__main__":
     import MySQLdb
