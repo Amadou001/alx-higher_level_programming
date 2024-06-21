@@ -30,7 +30,7 @@ if __name__ == "__main__":
             else:
                 print(city)
         i += 1
-    else:
+    if (len(rows) == 0):
         print()
 
     cursor.close()
