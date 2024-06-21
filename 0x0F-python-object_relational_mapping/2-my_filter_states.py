@@ -16,7 +16,7 @@ if __name__ == "__main__":
     state = sys.argv[4]
 
     cursor = db.cursor()
-    l_query = f"SELECT * FROM states WHERE name='{state}' ORDER BY id ASC"
+    l_query = "SELECT * FROM states WHERE name='{}' ORDER BY id ASC".format(state)
     cursor.execute(l_query)
     rows = cursor.fetchall()
     for row in rows:
