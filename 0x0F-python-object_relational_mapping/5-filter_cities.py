@@ -30,6 +30,8 @@ if __name__ == "__main__":
             else:
                 print(city)
         i += 1
+    else:
+        print()
 
     cursor.close()
     db.close()
