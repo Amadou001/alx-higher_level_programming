@@ -18,12 +18,18 @@ if __name__ == "__main__":
 
     state = sys.argv[4]
     cursor = db.cursor()
-    query = "SELECT cities.id, cities.name FROM cities INNER JOIN states ON\
+    query = "SELECT cities.name FROM cities INNER JOIN states ON\
           states.id = state_id WHERE states.name = %s ORDER BY cities.id ASC;"
     cursor.execute(query, (state,))
     rows = cursor.fetchall()
+    i = 0
     for row in rows:
-        print(row)
+        for city in row:
+            if i <= len(row):
+                print(city, end=", ")
+            else:
+                print(city)
+        i += 1
 
     cursor.close()
     db.close()
