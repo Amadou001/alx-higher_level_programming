@@ -14,7 +14,8 @@ if __name__ == "__main__":
         db=sys.argv[3]
     )
     cursor = db.cursor()
-    query= "SELECT cities.id, cities.name, states.name FROM cities INNER JOIN states on cities.state_id = states.id"
+    query = "SELECT cities.id, cities.name, states.name FROM\
+        cities INNER JOIN states on cities.state_id = states.id"
     cursor.execute(query)
 
     rows = cursor.fetchall()
