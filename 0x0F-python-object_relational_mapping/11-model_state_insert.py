@@ -19,9 +19,6 @@ if __name__ == "__main__":
     session.add(new_state)
     session.commit()
 
-    states = session.query(State).all()
+    print(new_state.id)
 
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
-    
     session.close()
