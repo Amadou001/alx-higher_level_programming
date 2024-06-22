@@ -16,7 +16,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    object_list = session.query(State).filter(State.name.ilike("%{}%".format("a")))
+    object_list = session.query(State)\
+        .filter(State.name.ilike("%{}%".format("a")))
 
     for state in object_list:
         session.delete(state)
