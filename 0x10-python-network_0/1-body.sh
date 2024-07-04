@@ -6,8 +6,8 @@ URL="$1"
 
 # Send a GET request and capture the response headers and body
 response=$(curl -s -w "%{http_code}" "$URL")
-body=$(echo "$response" | sed '$ d')
-status_code=$(echo "$response" | tail -n1)
+body="${response%[0-9][0-9][0-9]}"
+status_code="${response: -3}"
 
 # Check if the status code is 200
 if [ "$status_code" -eq 200 ]; then
